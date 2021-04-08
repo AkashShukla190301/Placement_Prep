@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const bodyParser = require('body-parser');
-
+const flash=require('connect-flash')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -40,6 +40,7 @@ app.use(
     })
   );
 
+app.use(flash())
 
 app.use((req, res, next) => {
   if (!req.session.user) {

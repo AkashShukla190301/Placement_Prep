@@ -32,7 +32,16 @@
              
              
             </ul>
+
                 <button type="button" class="btn btn-danger"><a href="/login">Login</a></button>
+            <%if(!isAuthenticated){ %>
+            <a class="btn btn-danger" href="/login" role="button" style="color: white;">Login</a>
+             <% } else { %>
+        
+                <a class="btn btn-danger" href="/logout" role="button" style="color: white;">Logout</a>
+
+                <% } %>
+
           </div>
         </div>
       </nav>
