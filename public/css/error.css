@@ -1,0 +1,18 @@
+
+.user-message{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ff0000;
+    border-radius: 3px;
+    background-color:rgb(233, 104, 104);
+    color: white;
+}
+
+.user-message--error{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ff0000;
+    border-radius: 3px;
+    background-color:rgb(233, 104, 104);
+    color: white;
+}

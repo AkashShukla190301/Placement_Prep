@@ -2,13 +2,30 @@ const User=require('../models/users')
 const bcrypt=require('bcryptjs')
 
 exports.login=(req,res,next)=>{
+    let message=req.flash('error');
+    if(message.length>0){
+        message=message[0];
+    }else{
+        message=null;
+    }
+
+
     res.render('auth/login',{
 
+        errorMessage:message
     })
 }
 
 exports.signup=(req,res,next)=>{
+    let message=req.flash('error');
+    if(message.length>0){
+        message=message[0];
+    }else{
+        message=null;
+    }
+
     res.render('auth/signup',{
+        errorMessage:message
 
     })
 }
@@ -19,6 +36,7 @@ exports.postLogin = (req, res, next) => {
     User.findOne({ email: email })
       .then(user => {
         if (!user) {
+            req.flash('error','Invalid email or password')
           return res.redirect('/login');
         }
         bcrypt
@@ -50,7 +68,8 @@ exports.postSignup = (req, res, next) => {
     User.findOne({ email: email })
       .then(userDoc => {
         if (userDoc) {
-          return res.redirect('/');
+            req.flash('error','Email already exist!')
+          return res.redirect('/signup');
         }
 
       return  bcrypt.hash(password,12)
