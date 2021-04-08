@@ -6,4 +6,10 @@ router.get('/login',login.login)
 
 router.get('/signup',login.signup)
 
+router.post('/login', login.postLogin);
+
+router.post('/signup', login.postSignup);
+
+router.post('/logout', login.postLogout);
+
 module.exports=router
