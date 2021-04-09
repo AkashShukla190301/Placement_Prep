@@ -8,6 +8,7 @@ const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const bodyParser = require('body-parser');
 const flash=require('connect-flash')
+const notes=require('./routes/getnotes')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -56,6 +57,7 @@ app.use((req, res, next) => {
 
 app.use(homeroutes);
 app.use(authRoutes);
+app.use(notes)
 app.use(err)
 
 
