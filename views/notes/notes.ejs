@@ -12,7 +12,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1> Courses</h1>
+  
     <div class="container">
 
         <% const length= courseobj.coursename.length %>
@@ -29,7 +29,7 @@
                   <p>
                     <%= courseobj.coursedescription[i] %>
                     </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <a href="<%= courseobj.courselink[i] %>" class="btn btn-primary">Explore</a>
                 </div>
               </div>
          <% } %>
