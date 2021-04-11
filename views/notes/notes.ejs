@@ -13,7 +13,23 @@
   </head>
   <body>
   
+<header>
+ 
+  <% if(isAdmin=="admin@example.com") { %>
+
+    <button type="button" class="btn btn-danger"><a href="/notesform">
+      Add Pdf</a></button>
+
+   
+    <% } else {%>
+      
+      <div></div>
+
+      <% } %>
+
+</header>
     <div class="container">
+
 
         <% const length= courseobj.coursename.length %>
        <% for(let i=0;i<length;i++) { %>

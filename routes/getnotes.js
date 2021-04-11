@@ -10,5 +10,5 @@ router.get('/notesform',notes.notesform)
 
 router.post('/postformdata',notes.postformdata)
 
-router.get('/download',notes.downloadPdf)
+router.get('/download/:pdfid',notes.downloadPdf)
 module.exports=router;

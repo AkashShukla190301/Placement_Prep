@@ -33,6 +33,7 @@ exports.signup=(req,res,next)=>{
 exports.postLogin = (req, res, next) => {
     const email = req.body.email;
     const password = req.body.password;
+    req.session.email=email
     User.findOne({ email: email })
       .then(user => {
         if (!user) {
