@@ -29,7 +29,7 @@
                   <p>
                     <%= courseobj.coursedescription[i] %>
                     </p>
-                  <a href="<%= courseobj.courselink[i] %>" class="btn btn-primary">Explore</a>
+                  <a href="<%= courseobj.courselink%>?<%=notesdetail= courseobj.coursename[i] %>" class="btn btn-primary">Explore</a>
                 </div>
               </div>
          <% } %>

@@ -9,7 +9,8 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const bodyParser = require('body-parser');
 const flash=require('connect-flash')
 const notes=require('./routes/getnotes')
-const notesDetail = require("./routes/getnotesDetail")
+var multer  = require('multer')
+
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -24,10 +25,31 @@ const MONGODB_URI =
     collection: 'sessions'
   });
 
+  
+  
+  const fileFilter = (req, file, cb) => {
+    if (
+      file.mimetype === 'application/pdf'
+     
+    ) {
+      cb(null, true);
+    } else {
+      cb(null, false);
+    }
+  };
+
+
 
   app.use(bodyParser.urlencoded({ extended: false }));
+ 
+
+  app.use(
+    multer({ dest:'pdfFiles', fileFilter: fileFilter }).single('filename')
+  );
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/pdfFiles', express.static(path.join(__dirname, 'pdfFiles')));
+
 const viewsPath = path.join(__dirname, "views")
 
 app.set('view engine', 'ejs');
@@ -59,7 +81,6 @@ app.use((req, res, next) => {
 app.use(homeroutes);
 app.use(authRoutes);
 app.use(notes)
-app.use(notesDetail)
 app.use(err)
 
 
