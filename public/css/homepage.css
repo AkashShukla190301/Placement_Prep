@@ -46,11 +46,21 @@ section{
 
 
 header{
-     background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url('/img/wave.png');
+     /* background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url('/img/wave.png');
      background-size: cover;
      background-attachment: fixed;
-     background-position: center;
+     background-position: center; */
+     background-color: black;
+
+     color: white;
+     font-weight: 900;
      height: 100vh;  
+     text-align: center;
+}
+
+.navbar-custom{
+background-color: white;
+font-size: large;
 }
 
 .hero-text-box{
@@ -62,9 +72,60 @@ header{
 }
 
 
+.header-main{
+    font-weight: 800;
+    line-height: 3rem;
+    font-size: 3rem;
+    
+}
+
+.placement{
+    color: yellow;
+    font-size: 4rem;
+    text-shadow:  1px 1px 0 red, 
+                     2px 2px 0 red;
+     
+}
+
+.header-button{
+}
 
 
+#start-learning{
+    /* background-color: white; */
+    /* color: black; */
+    background-color: black;
+    font-weight: 700;
+    font-size: large;
+    border: 1px solid yellow;
+}
 
+#start-learning:hover{
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-size: larger;
+    transition:  0.5s;   
+     transition-timing-function: ease-in-out;
+}
+
+#free-resources{
+    font-weight: 700;
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+
+#free-resources:hover{
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-size: larger;
+    transition:  0.5s;   
+    border: 1px solid white;
+
+     transition-timing-function: ease-in-out;
+}
 
 .main-nav{
     float: right;
