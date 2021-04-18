@@ -5,6 +5,7 @@ const homecontroller=require("../controller/index")
 
 router.get('/', homecontroller.index)
 
+router.get('/allproducts',homecontroller.getallproducts)
 
 module.exports=router
 

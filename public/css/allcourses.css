@@ -1,0 +1,58 @@
+
+.glass-container{
+    width: 15rem;
+    margin-top: 50px;
+    height: 375px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 34px;
+    backdrop-filter: blur(8px);
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+
+
+h2 {
+ color: wheat;
+ position: absolute;
+    bottom: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+  }
+
+  .forpress{
+    cursor: pointer;
+  }
+
+  .manyglass{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      
+  }
+
+  .bottom-quote{
+      text-align: center;
+      font-family: "Lobster", cursive;
+      font-size: 2rem;
+      padding-top: 50px;
+      letter-spacing: 0.8rem;
+  }
+
+  .open {
+    background: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }

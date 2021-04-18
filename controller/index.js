@@ -3,3 +3,10 @@ exports.index=(req,res,next)=>{
         isAuthenticated:req.session.isLoggedIn
     })
 }
+
+exports.getallproducts=(req,res,next)=>{
+    res.render("allcourses",{
+        isAuthenticated:req.session.isLoggedIn
+    })
+}
+

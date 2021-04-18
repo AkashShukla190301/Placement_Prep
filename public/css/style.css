@@ -24,6 +24,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-gap :7rem;
     padding: 0 2rem;
+	transform: translateY(100%);
 }
 
 .img{
@@ -220,3 +221,14 @@ a:hover{
 		justify-content: center;
 	}
 }
+
+
+.slider {
+    background: rgb(16, 17, 17);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+  }
