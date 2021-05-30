@@ -61,7 +61,7 @@
     align-items: center;
   }
   .slider {
-    background: rgb(97, 105, 109);
+    background: rgb(0, 0, 0);
     position: fixed;
     top: 0;
     left: 0;
@@ -140,6 +140,13 @@
     /* Scaling button to 0.98 to its original size */
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
     /* Lowering the shadow */
+}
+
+.button:hover{
+  transform: scale(1);
+  color: rgb(121, 160, 50);
+  box-shadow: 3px 2px 22px 1px rgba(187, 179, 179, 0.671);
+
 }
 
 
