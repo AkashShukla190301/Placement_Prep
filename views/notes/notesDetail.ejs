@@ -4,22 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Notes Detail</title>
+    <link rel="stylesheet" href="/css/homepage.css" />
+    <link rel="stylesheet" href="/css/notesDetails.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-  <% const length= response.length %>
-  <% for(let i=0;i<length;i++) { %>
-    <div class="card" style="width: 18rem;">
-        <img src="https://media.istockphoto.com/photos/pdf-file-download-icon-picture-id487099881?s=612x612" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%=response[i].coursename%></h5>
-          <p class="card-text">semester <%=response[i].semester%></p>
-          <p class="card-text"><%=response[i].subjectname%> </p>
-          <a href="/download/<%=i%>" class="btn btn-primary">Download Pdf</a>
-        </div>
-      </div>
 
-    <% } %>
+  </head>
+<body>
+  <main>
+    <h1>Download Your Notes</h1>
+    <section class="cards">
+      <% const length= response.length %>
+      <% for(let i=0;i<length;i++) { %>
+
+        <div class="card">
+          <div class="card__image-container">
+            <img
+              src="https://cdn.pixabay.com/photo/2012/05/04/10/55/pdf-47199__480.png"
+              alt="Detailed image description would go here."
+            />
+          </div>
+          <div class="card__content">
+            <p class="card__title text--medium">
+              <%=response[i].coursename%>
+            </p>
+            <p class="card__title text--medium">
+              <%=response[i].subjectname%>
+            </p>
+            <div class="card__info">
+              <p class="text--medium time">semester <%=response[i].semester%></p>
+              <p class="card__price text--medium">  <a href="/download/<%=i%>" class="btn btn-primary">Download Pdf</a></p>
+            </div>
+          </div>
+        </div>
+
+        <% } %>
+      </section>
+ 
+
+  
+      
+  </main>
 </body>
 </html>

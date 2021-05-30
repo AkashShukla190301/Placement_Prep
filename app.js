@@ -9,6 +9,7 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const bodyParser = require('body-parser');
 const flash=require('connect-flash')
 const notes=require('./routes/getnotes')
+const chat=require('./routes/chat')
 var multer  = require('multer')
 
 
@@ -81,6 +82,7 @@ app.use((req, res, next) => {
 app.use(homeroutes);
 app.use(authRoutes);
 app.use(notes)
+app.use(chat)
 app.use(err)
 
 
