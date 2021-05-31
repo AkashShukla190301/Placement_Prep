@@ -24,7 +24,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-gap :7rem;
     padding: 0 2rem;
-	transform: translateY(100%);
+	/* transform: translateY(100%); */
 }
 
 .img{
