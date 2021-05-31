@@ -2,14 +2,19 @@
 .landing{
   background: rgb(42,42,46);
   color: white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
 }
 
 .manyglass{
+  grid-column: 3/10;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
   justify-content: center;
+  padding-top: 10rem;
+  
 }
 
 .card1{
@@ -17,7 +22,7 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: 200px 1fr;
-  grid-gap: 2rem;
+  /* grid-gap: 2rem; */
 }
 
 .card1 .image__container{
@@ -34,10 +39,13 @@ img{
 }
 .title{
   grid-column: 1/-1;
+  grid-row: 2/3;
   font-family: Open Sans;
   font-weight: 600;
-  font-size: large;
+  font-size: x-large;
   width: 100%;
+  align-self: start;
+  padding-top: 4px
 }
 
 .quote{

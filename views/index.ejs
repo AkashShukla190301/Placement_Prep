@@ -1,60 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/homepage.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <title>Home</title>
-    <script defer src="../node_modules/swup/dist/swup.min.js"></script>
-  </head>
-  <body data-barba="wrapper">
-    <main>
-      <section class="landing">
-        <nav>
-          <h1 id="logo">Free Learning</h1>
-          <ul class="nav-links">
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
-          </ul>
-        </nav>
-        
-        <div class="foravatar">
-          <div class="left-part">
-            <h2 class="big-text">Stay Learning</h2>
-            <p class="para">A place where you can find all resources free</p>
-            <a href="/allproducts" class="button">Placement Prep</a>    
-        </div>
-          <img src="/img/avatar-home.png" id="home-avatar" alt="avatar" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="stylesheet"  href="/css/homepage.css">
+  <title>Frontend Mentor | [Blogr]</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header class="header-container-grid">
+      <img class="header-bg" src="/img/bg-pattern-intro.svg" alt="" srcset="">
+      <div class="navbar">
+        <div class="title-nav">Free Learning</div>
+        <div class="drop-down-item">
+          <div class="products-drop-down">
+            <select name="product" id="product">
+              <option >Product</option>
+              <option>OverView</option>
+              <option>Pricing</option>
+              <option>MarketPlace</option>
+              <option>Features</option>
+              <option>Integration</option>
+            </select>
+          </div>
+          <div class="company-drop-down">
+            <select name="company" id="product">
+              <option >Company</option>
+              <option>About</option>
+              <option>Team</option>
+              <option value="audi">Blog</option>
+              <option>Careers</option>
+            </select>
+          </div>
+          <div class="connect-drop-down">
+            <select name="connect" id="product">
+              <option >Connect</option>
+              <option>Contact</option>
+              <option>  Newsletter</option>
+              <option>  LinkedIn </option>
+            </select>
+          </div>
         </div>
 
-      </section>
-    </main>
-    <div class="intro">
-      <div class="intro-text">
-        <h1 class="hide">
-          <span class="text">Creating inovation</span>
-        </h1>
-        <h1 class="hide">
-          <span class="text">For Everyday</span>
-        </h1>
-        <h1 class="hide">
-          <span class="text">people.</span>
-        </h1>
+        <div class="login-signup">
+            <button class="right-btn" ><a href="/login">Login</a></button>
+            <button class="left-btn"><a href="/signup">Sign Up</a></button>
+        </div>
       </div>
+      <div class="title">  A modern way to Learning</div>
+      <div class="title-para">  Grow your skills and build your confidence
+      </div>
+      <div class="action-btn"> 
+        <button class="left-btn"><a href="/allproducts">Start for Free</a></button>
+        <button class="right-btn">    <a href="/allproducts"> Learn More</a>   
+        </button>
+      </div>
+  </header>
+
+  <main class="main-grid">
+      <div class="design-for">
+        Designed For the future
+      </div>
+      <div class="left-part-design">
+          <h1 class="left-part-title">Introducing an extensible editor</h1>
+          <p class="left-part-para">  Introducing an extensible editor
+            free learning features an provide intuitive interface which lets you focus on one thing: creating learning. 
+            The editor supports management of multiple platform and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.</p>
+
+            <h1 class="left-part-title" id="left-second">  Robust content management
+            </h1>
+            <p class="left-part-para"> Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+            </p>
+      </div>
+      <div class="right-part-design">
+        <img src="/img/illustration-editor-desktop.svg" alt="image">
+      </div>
+  </main>
+
+  <section class="mobile-grid">
+    <div class="left-mobile-grid">
+      <img src="/img/illustration-phones.svg" alt="" srcset="">
     </div>
-    <div class="slider"></div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/home.js"></script>
-  </body>
+    <div class="right-mobile-grid">
+      <h1 class="mobile-grid-title">
+        State of the Art Infrastructure
+
+      </h1>
+      <p class="mobile-grid-parah">
+        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+      
+      </p>
+    </div>
+  </section>
+
+    <section class="laptop-grid">
+      <div class="left-part-laptop">
+        <img src="/img/illustration-laptop-desktop.svg" alt="laptopimage" >
+      </div>
+      <div class="rightpart-laptop">
+
+        <div class="rightpart-title-laptop">
+          Free, open, simple
+        </div>
+        <div class="right-part-para-laptop">
+          Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        
+        </div>  
+
+        <div class="rightpart-title-laptop">
+          Powerful tooling
+        </div>
+        <div class="right-part-para-laptop">
+          Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.
+
+        </div>  
+
+      </div>
+    </section>
+
+    <footer class="footer-grid">
+      <div class="footer-logo">
+          <img src="/img/logo.svg" alt="">
+      </div>
+
+      <div class="footer-product">
+        <span id="product">Product</span>
+        <div class="foot-produ-list">
+   <span>Overview</span>
+  <span>Pricing</span>
+<span>  Marketplace</span> 
+<span>Features</span> 
+        </div>
+      </div>
+
+      <div class="footer-company">
+        <span id="product">Company</span>
+
+
+        <div class="foot-produ-list">
+          <span>About</span>
+         <span>Team</span>
+       <span>  Blog</span> 
+       <span>Careers</span> 
+         
+               </div>
+
+      </div>
+
+      <div class="footer-connect">
+        <span id="product">Connect</span>
+
+
+          <div class="foot-produ-list">
+            <span>Contact</span>
+           <span>Newsletter</span>
+         <span>  LinkedIn</span> 
+        
+                 </div>
+
+      </div>
+
+    </footer>
+
+<!-- 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Aman Singh</a>.
+  </div> -->
+</body>
 </html>
